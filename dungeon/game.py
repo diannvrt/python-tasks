@@ -34,11 +34,37 @@ print('5 - зажечь факел')
 print()
 
 choice = input()
-# ответ пока не используем — разберём на 3 занятии
 
 title = "Удачи"
 frame = "=" * 25
 print(frame)
 print(f'{title}, {hero_name}')
 print(frame)
+print()
+
+print("Настройка героя.")
+print("Здоровье, сила, ловкость, выносливость — по одному числу в строке:")
+health = int(input())
+strength = int(input())
+agility = int(input())
+luck = int(input())
+
+base_attack = 10
+damage = base_attack + strength * 1.5
+crit_damage = damage * 2
+
+stamina = (agility + health) // 2
+
+print("Характеристики героя:")
+print(f"Здоровье: {health}")
+print(f"Сила: {strength}")
+print(f"Ловкость: {agility}")
+print(f"Удача: {luck}")
+
+print()
+
+print(f"Урон героя: {damage:.1f}")
+print(f"Критический урон: {crit_damage:.1f}")
+print(f"Запас сил: {stamina}")
+
 print()
