@@ -1,0 +1,16 @@
+#Функция is_square(k) возвращает True, если k (> 0) — квадрат целого числа. Найти количество квадратов в наборе из 10 чисел
+
+import math
+
+def is_square(k):
+    if k <= 0:
+        return False
+    root = int(math.sqrt(k))
+    return root * root == k
+
+count = 0
+for i in range(10):
+    k = int(input())
+    if is_square(k):
+        count += 1
+print(count)
